@@ -1,0 +1,89 @@
+	<div id="sk-root" class="sk-root">
+		<div id="sk-container" class="container container-fill container-column" data-reactroot="">
+			<div class="views">
+				<div class="view" id="app-index">
+					<header class="navbar navbar-primary">
+						<h2 class="navbar-title navbar-center">产品中心</h2>
+						<div class="navbar-nav navbar-left">
+							<a class="navbar-nav-item" href="#/home">
+								<span class="navbar-nav-title"></span>
+								<span class="icon icon-left-nav navbar-icon"></span>
+							</a>
+						</div>
+					</header>
+					<div class="container container-fill container-scrollable">
+						<div class="group group-no-padded mg0">
+							<div class="tabs11 mg0">
+								<div class="slider1">
+									<div class="tabs-nav1 btn-group btn-group-justify  mg0">
+										<button>集合信托</button>
+										<button>集合资管</button>
+										<button>股权基金</button>
+										<button>债权基金</button>
+									</div>
+									<div class="tabs-nav1 btn-group btn-group-justify  mg0">
+										<button>海外保险</button>
+										<button>留学移民</button>
+										<button>养老医疗</button>
+										<button>定制旅游</button>
+									</div>
+								</div>
+								
+								<div class="tabs-body produce-body">
+									<div class="active tab-panel">
+										<header class="group-header pdl10">热销产品</header>
+									    <div class="group-body">
+											<ul class="list1 list-produce">
+												<li class="item item-content" target="_blank" ng-repeat="item in initProductDatas1">
+												    <div class="item-main">
+												    	<div class="item-title-row">
+												    		<h3 class="item-title"><span>重点推荐</span><span ng-bind="item.productName"></span></h3>
+												    	</div>
+												    	<div class="item-subtitle"><span ng-bind="item.returnRate"></span><span ng-bind="item.productTerm"></span><span ng-bind="item.productType"></span></div>
+											    	<div class="item-desc"><span>认证可见</span>返佣比例<a class="ml20 btn-order">预约</a></div>
+												    </div>
+												    <div class="item-media">
+                                                        <div class="pie"><span>80%</span></div>
+													</div>
+													<div class="item-header"></div>
+												</li>
+												
+												<!-- <li class="item item-content" target="_blank">
+												    <div class="item-main">
+												    	<div class="item-title-row">
+												    		<h3 class="item-title"><span>重点推荐</span>湘潭九华建设1期</h3>
+												    	</div>
+												    	<div class="item-subtitle"><span>8.3%-9.0%</span><span>24个月</span><span>基础设施</span></div>
+												    	<div class="item-desc"><span>认证可见</span>返佣比例<a class="ml20 btn-order">预约</a></div>
+												    </div>
+												    <div class="item-media">
+                                                        <div class="pie"><span>80%</span></div>
+													</div>
+												</li>
+												<div class="item-header"></div> -->
+                                            </ul>
+									    </div>
+									</div>
+									<div class="tab-panel">
+										2
+									</div>
+									<div class="tab-panel">
+										3
+									</div>
+									<div class="tab-panel">
+										4
+									</div>
+								</div>
+							</div>
+					    </div>
+					</div>
+			   </div>
+			</div>
+			<nav class="tabbar tabbar-primary">
+				<a href="#/home" class="tabbar-item" title="首页" icon="list"><span class="icon icon-home"></span><span class="tabbar-label">首页</span></a>
+				<a href="#/product" class="active tabbar-item" title="产品" icon="info"><span class="icon icon-produce"></span><span class="tabbar-label">产品</span></a>
+				<a href="#/notice" class="tabbar-item" title="公告" icon="info"><span class="icon icon-notice"></span><span class="tabbar-label">公告</span></a>
+				<a href="" ng-click="loginNot()" class="tabbar-item" title="我" icon="info"><span class="icon icon-me"></span><span class="tabbar-label">我</span></a>
+			</nav>
+	    </div>
+	</div>

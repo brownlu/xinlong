@@ -1,0 +1,112 @@
+
+	<div id="sk-root" class="sk-root" ui-view>
+		<div id="sk-container" class="container container-fill container-column" data-reactroot="">
+			<div class="views">
+				<div class="view" id="app-index">
+					<header class="navbar navbar-primary">
+						<h2 class="navbar-title navbar-center">会员中心</h2>
+						<div class="navbar-nav navbar-left">
+							<a class="navbar-nav-item" href="#/home">
+								<span class="navbar-nav-title"></span>
+								<span class="icon icon-left-nav navbar-icon"></span>
+							</a>
+						</div>
+					</header>
+					<div class="container container-fill container-scrollable">
+						<div class="group group-no-padded mg0 me">
+							<div class="group-body">
+								<ul class="list">
+									<li class="item item-linked pdbt10">
+										<a href="#/about_me">
+											<div class="item-media">
+												<img src="images/user.jpg" class="item-img">
+											</div>
+											<div class="item-main">
+												<h3 class="item-title ml10">李大大<span class="honour"></span>
+													<p class="gray">经验值：<span class="span-div"><span class="progress"><span class="bar" style="width: 10%;"></span></span></span></p>
+													<p class="gray"><i class="flower"></i>普通会员&nbsp;&nbsp;&nbsp;&nbsp;提升至下一级还需80天</p></h3>
+											    <span class="icon icon-right-nav item-icon"></span>
+											</div>
+									    </a>
+									</li>
+								</ul>
+							</div>
+							<div class="item-header"></div>
+							<div class="group-body">
+								
+								<div class="card-body">
+									<p><i class="people"></i>服务经理: <span ng-bind="initManagerData[0].managerId"></span></p>
+								</div>
+								<div class="card-footer">
+									<a href="javascript: void(0)"><span><img src="images/icon-1.jpg"></span><br /><span ng-bind="initManagerData[0].phone"></span></a>
+									<a href="javascript: void(0)"><span><img src="images/icon-2.jpg"></span><br /><span ng-bind="initManagerData[0].qq"></span></a>
+									<a href="javascript: void(0)"><span><img src="images/icon-3.jpg"></span><br /><span ng-bind="initManagerData[0].email"></span></a>
+								</div>			
+							</div>
+							<div class="item-header"></div>
+							<div class="group-body">
+								<ul class="list">
+									<li class="item item-linked">
+										<a href="">
+											<div class="item-media"><i class="icon-1"></i></div>
+											<div class="item-main">
+												<h3 class="item-title">我的成交</h3>
+											    <span class="icon icon-right-nav item-icon"></span>
+											</div>
+									    </a>
+									</li>
+									<li class="item item-linked">
+										<a href="#/order">
+											<div class="item-media"><i class="icon-2"></i></div>
+											<div class="item-main">
+												<h3 class="item-title">我的预约</h3>
+											    <span class="icon icon-right-nav item-icon"></span>
+											</div>
+									    </a>
+									</li>
+									<li class="item item-linked">
+										<a href="#/collect">
+											<div class="item-media"><i class="icon-3"></i></div>
+											<div class="item-main">
+												<h3 class="item-title">我的收藏</h3>
+											    <span class="icon icon-right-nav item-icon"></span>
+											</div>
+									    </a>
+									</li>
+									<li class="item item-linked">
+										<a href="">
+											<div class="item-media"><i class="icon-4"></i></div>
+											<div class="item-main">
+												<h3 class="item-title">我的咨询</h3>
+											    <span class="icon icon-right-nav item-icon"></span>
+											</div>
+									    </a>
+									</li>
+								</ul>
+							</div>
+							<div class="item-header"></div>
+							<div class="group-body">
+								<ul class="list">
+									<li class="item item-linked">
+										<a href="#/about">
+											<div class="item-media"><i class="icon-5"></i></div>
+											<div class="item-main">
+												<h3 class="item-title">关于</h3>
+											    <span class="icon icon-right-nav item-icon"></span>
+											</div>
+									    </a>
+									</li>
+								</ul>
+							</div>
+					    </div>
+					</div>
+			    </div>
+			</div>
+            <nav class="tabbar tabbar-primary">
+                <a href="#/home" class="tabbar-item" title="首页" icon="list"><span class="icon icon-home"></span><span class="tabbar-label">首页</span></a>
+                <a href="#/product" class="tabbar-item" title="产品" icon="info"><span class="icon icon-produce"></span><span class="tabbar-label">产品</span></a>
+                <a href="#/notice" class="tabbar-item" title="公告" icon="info"><span class="icon icon-notice"></span><span class="tabbar-label">公告</span></a>
+                <a href="#/me" class="active tabbar-item" title="我" icon="info"><span class="icon icon-me"></span><span class="tabbar-label">我</span></a>
+            </nav>
+	    </div>
+	</div>

@@ -1,0 +1,114 @@
+
+	<div id="sk-root" class="sk-root" ui-view>
+		<div id="sk-container" class="container container-fill container-column" data-reactroot="">
+			<div class="views">
+				<div class="view white-bg" id="app-index">
+					<header class="navbar navbar-primary">
+						<h2 class="navbar-title navbar-center">联系我们</h2>
+						<div class="navbar-nav navbar-left">
+							<a class="navbar-nav-item" href="#/about_me">
+								<span class="navbar-nav-title"></span>
+								<span class="icon icon-left-nav navbar-icon"></span>
+							</a>
+						</div>
+					</header>
+					<div class="container container-fill container-scrollable">
+						<!--地图-->
+				  		<div id="allmap" style="width:100%;height:200px !important;"></div>
+				  		<div class="address">
+				  			<p>上海信珑合诚资产管理有限公司</p>
+				  			<p>公司地址：上海市 虹口区 长阳路8号15B室A071</p>
+				  			<p>邮编：200233</p>
+				  			<p>客服电话：400-630-7088（工作日10:00-18:00）</p>
+				  		</div>
+					    <!--/地图-->
+					    <!--筑巢引凤-->
+					    <div class="zcyf">
+					    	<div class="left-line"></div>
+					    	<div class="right-line"></div>
+					    	<div class="center-banner">筑巢引凤</div>
+					    </div>
+					    <div class="p-font">
+							<p class="text-center">作为国内成立最早的汽车合资企业之一，</p>
+							<p class="text-center">上汽大众坚持“员工是公司最宝贵财富”的理念，</p>
+							<p class="text-center">为员工构建了完善的人才培养的发展体系，</p>
+							<p class="text-center">逐渐形成了从吸引人才、培养人才，</p>
+							<p class="text-center mb10">再到全面强化人才综合实力的科学化管理之路。</p>
+						</div>
+						<div class="recruit">
+							<div class="mt10">
+								<p>招募一、团队主管</p>
+								<p>岗位职责：</p>
+								<ul class="mb10">
+									<li>1.负责理财销售团队组建及管理。</li>
+									<li>2.负责带领团队整合销售资源，开发中高端客户。</li>
+									<li>3.负责带领团队向客户推介理财产品，帮助客户制订资产配置方案。</li>
+									<li>4.个人有良好的客户资源和销售业绩。</li>
+								</ul>
+								<p>岗位要求 ：</p>
+								<ul>
+									<li>1.熟悉信托、证券、股权、保险类个产品，具有较好的金融、投资、法律等只是，熟悉行业的相关政策。</li>
+									<li>2.具备一定的领导力和团队协作精神，有能力带领团队实现团队目标。</li>
+									<li>3.具有二年以上金融机构理财产品销售经验及团队管理经验。</li>
+								</ul>
+							</div>
+							<div class="mt10">
+								<p>招募二、理财经理</p>
+								<p>岗位职责：</p>
+								<ul class="mb10">
+									<li>1.积极开拓市场，开发金融产品高端客户群。</li>
+									<li>2.及时反馈整理客户信息和资料。</li>
+									<li>3.能积极与其他部门合作，及时汇报每日工作成果。</li>
+									<li>4.完成上级交办的其他任务。</li>
+								</ul>
+								<p>岗位要求 ：</p>
+								<ul>
+									<li>1.专科或以上学历，具备相关金融知识者优先。</li>
+									<li>2.踏实肯干，同事具备良好的沟通协调能力，能承受一定的工作压力。</li>
+									<li>3.有销售经验及客户渠道资源者优先。</li>
+								</ul>
+							</div>
+							<div class="mt10">
+								<p>若有意向，请发送您的简历至邮箱：hr@jiyuan.com,</p>
+								<p>联系电话：21-6886815513917021364（熊小姐）</p>
+							</div>
+						</div>
+					    <!--/筑巢引凤-->
+					</div>
+			    </div>
+			</div>
+            <nav class="tabbar tabbar-primary">
+                <a href="#/home" class="active tabbar-item" title="首页" icon="list"><span class="icon icon-home"></span><span class="tabbar-label">首页</span></a>
+                <a href="#/product" class="tabbar-item" title="产品" icon="info"><span class="icon icon-produce"></span><span class="tabbar-label">产品</span></a>
+                <a href="#/notice" class="tabbar-item" title="公告" icon="info"><span class="icon icon-notice"></span><span class="tabbar-label">公告</span></a>
+                <a href="#/me" class="tabbar-item" title="我" icon="info"><span class="icon icon-me"></span><span class="tabbar-label">我</span></a>
+            </nav>
+	    </div>
+	</div>
+    <!--以下内容在控制器中写-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1zhKzsm45uerG28TZweC3qbf"></script>
+<script>
+	$(function(){
+		//百度地图尺寸
+		$('#allmap').height($(window).height()-53);
+		$(window).resize(function(){
+			$('#allmap').height($(window).height()-53);
+		});
+		//百度地图API功能
+         var map = new BMap.Map("allmap");
+         var point = new BMap.Point(121.411754,31.17012);
+         map.centerAndZoom(point,12);
+         map.addControl(new BMap.NavigationControl());
+         map.addControl(new BMap.ScaleControl());
+         // 创建地址解析器实例
+         var myGeo = new BMap.Geocoder();
+         // 将地址解析结果显示在地图上,并调整地图视野
+         myGeo.getPoint("徐汇区", function(point){
+             if (point) {
+           	  map.centerAndZoom(point, 16);
+                 map.addOverlay(new BMap.Marker(point));
+             }
+         }, "上海市");
+	});
+</script>
+

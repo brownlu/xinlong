@@ -1,0 +1,75 @@
+
+	<div id="sk-root" class="sk-root" ui-view>
+		<div id="sk-container" class="container container-fill container-column" data-reactroot="">
+			<div class="views">
+				<div class="view" id="app-index">
+					<header class="navbar navbar-primary">
+						<h2 class="navbar-title navbar-center">我的预约</h2>
+						<div class="navbar-nav navbar-left">
+							<a class="navbar-nav-item" href="#/me">
+								<span class="navbar-nav-title"></span>
+								<span class="icon icon-left-nav navbar-icon"></span>
+							</a>
+						</div>
+					</header>
+					<div class="container container-fill container-scrollable">
+						
+						<div class="group-body" ng-repeat="item in initOrderDatas">
+							<a href="#/product_detail">
+							<div class="project">
+								<h5 ng-bind="item.productName"></h5>
+								<p>预期年化收益率</p>
+								<p class="number-p" ng-bind="item.returnRate"></p>
+							</div>
+							</a>
+							<ul class="project-detail">
+
+								<li>预约日期：<span ng-bind="item.updatedDate|date:'yyyy-MM-dd'"></span></li>
+								<li>处&nbsp理&nbsp人&nbsp：<span>某某某</span></li>
+								<li>处理时间：<span ng->2016-4-28</span></li>
+							</ul>
+							<div class="item-header"></div>
+						</div>
+						
+						<!-- <div class="group-body">
+							<a href="#/product_detail">
+							<div class="project">
+								<h5>湘潭九华建设1期</h5>
+								<p>预期年化收益率</p>
+								<p class="number-p">8.0% — 9.0%</p>
+							</div>
+							</a>
+							<ul class="project-detail">
+
+								<li>预约日期：<span>2016-4-28</span></li>
+								<li>处&nbsp理&nbsp人&nbsp：<span>某某某</span></li>
+								<li>处理时间：<span>2016-4-28</span></li>
+							</ul>
+						</div>
+						<div class="item-header"></div>
+						<div class="group-body">
+							<a href="#/product_detail">
+							<div class="project">
+								<h5>湘潭九华建设1期</h5>
+								<p>预期年化收益率</p>
+								<p class="number-p">8.0% — 9.0%</p>
+							</div>
+							</a>
+							<ul class="project-detail">
+
+								<li>预约日期：<span>2016-4-28</span></li>
+								<li>处&nbsp理&nbsp人&nbsp：<span>某某某</span></li>
+								<li>处理时间：<span>2016-4-28</span></li>
+							</ul>
+						</div> -->
+					</div>
+			    </div>
+			</div>
+            <nav class="tabbar tabbar-primary">
+                <a href="#/home" class="tabbar-item" title="首页" icon="list"><span class="icon icon-home"></span><span class="tabbar-label">首页</span></a>
+                <a href="#/product" class="tabbar-item" title="产品" icon="info"><span class="icon icon-produce"></span><span class="tabbar-label">产品</span></a>
+                <a href="#/notice" class="tabbar-item" title="公告" icon="info"><span class="icon icon-notice"></span><span class="tabbar-label">公告</span></a>
+                <a href="#/me" class="active tabbar-item" title="我" icon="info"><span class="icon icon-me"></span><span class="tabbar-label">我</span></a>
+            </nav>
+	    </div>
+	</div>

@@ -1,0 +1,83 @@
+	<div id="sk-root" class="sk-root" ui-view>
+		<div id="sk-container" class="container container-fill container-column" data-reactroot="">
+			<div class="views">
+				<div class="view" id="app-index">
+					<header class="navbar navbar-primary">
+						<h2 class="navbar-title navbar-center">信珑合诚</h2>
+						<div class="navbar-nav navbar-left">
+							<a class="navbar-nav-item" href="#/">
+								<span class="navbar-nav-title fz-14">公司情况</span>
+								<!-- <span class="icon icon-left-nav navbar-icon"></span> -->
+							</a>
+						</div>
+						<div class="navbar-nav navbar-right">
+							<a class="navbar-nav-item" href="#/">
+								<span class="navbar-nav-title fz-14">登录   注册</span>
+								<span class="navbar-nav-title fz-14" style="display:none"></span>
+								<!-- <span class="icon icon-left-nav navbar-icon"></span> -->
+							</a>
+						</div>
+					</header>
+					<div class="container container-fill container-scrollable">
+						<div class="group group-no-padded mg0">
+								<img src="images/banner-home.jpg"  style="width: 100%;"/>
+								<header class="group-header pdl10">上市公司季报揭秘：基金大肆淘金次新股</header>
+								<div class="group-body news-body pdlr10">
+									<ul class="list">
+										<li class="item item-content item-linked" ng-repeat="item in initNewsDatas">
+											<a href=""  target="_blank">
+												<div class="item-media">
+													<img src="images/item-img-1.jpg" width="120" height="80">
+												</div>
+												<div class="item-main">
+													<div class="item-title-row">
+														<h3 class="item-title">{{item.title}}</h3>
+													</div>
+													<div class="item-subtitle">{{item.content}}</div>
+												</div>
+											</a>
+										</li>
+										
+									</ul>
+								</div>
+								
+					    </div>
+					    <header class="group-header pdl10">上市公司季报揭秘：基金大肆淘金次新股</header>
+					    <ul>
+				    	    <li class="group-body" ng-repeat="item in initProductDatas">
+				    			<a href="#/product_detail#{{item.productId}}">
+				    			<div class="project">
+				    				<h5>{{item.productName}}</h5>
+				    				<p>预期年化收益率</p>
+				    				<p class="number-p">{{item.returnRate}}</p>
+				    			</div>
+				    			</a>
+				    			<ul class="project-detail">
+				    				<button class="btn btn-xs radius4 btn-collect" ng-click="successCol(item.productId,$event)">收藏</button>
+				    				<button class="btn btn-xs btn-warning radius4" ng-click="successOrd(item.productId,$event)">预约</button>
+				    				<li>项目类型：<span>{{item.productType}}</span></li>
+				    				<li>发行日期：<span>{{item.releaseDate}}</span></li>
+				    				<li>项目期限：<span class="orange">{{item.productTerm}}</span></li>
+				    				<li>投资起点：<span class="orange">{{item.investmentStart}}</span></li>
+				    			</ul>
+				    	    </li>
+					    </ul>
+					</div>
+			    </div>
+			</div>
+			<div class="popup" id="popup" style="display:none;">
+				<span>请您确认是合格投资者，承诺符合中国证监会有关合格投资者的规定</span>
+				<p>合格投资者是指具备相应风险识别能力和风险承担能力，投资于单只私募基金的金额不低于100万元且符合下列相关标准的单位和个人： 
+				一、净资产不低于1000万元的单位； 
+				二、个人金融资产不低于300万元或者最近三年个人年均收入不低于50万请详细阅读本提示，私募基金产品，仅可以向合格投资者进行推介，请确认。</p>
+				<button onclick="document.getElementById('popup').style.display='none'">确定</button>
+			</div>
+			<nav class="tabbar tabbar-primary">
+				<a href="#/home" class="active tabbar-item" title="首页" icon="list"><span class="icon icon-home"></span><span class="tabbar-label">首页</span></a>
+				<a href="#/product" class="tabbar-item" title="产品" icon="info"><span class="icon icon-produce"></span><span class="tabbar-label">产品</span></a>
+				<a href="#/notice" class="tabbar-item" title="公告" icon="info"><span class="icon icon-notice"></span><span class="tabbar-label">公告</span></a>
+				<a href="" class="tabbar-item" ng-click="loginNot()" title="我" icon="info"><span class="icon icon-me"></span><span class="tabbar-label">我</span></a>
+			</nav>
+	    </div>
+
+	</div>

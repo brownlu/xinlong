@@ -1,0 +1,38 @@
+<div id="sk-root" class="sk-root" ui-view>
+    <div id="sk-container" class="container container-fill container-column" data-reactroot="">
+      <div class="views">
+        <div class="view" id="app-index">
+          <header class="navbar navbar-primary">
+            <h2 class="navbar-title navbar-center" ng-bind="message">login </h2>
+            <div class="navbar-nav navbar-left">
+              <a class="navbar-nav-item" href="#/">
+                <span class="navbar-nav-title"></span>
+                <span class="icon icon-left-nav navbar-icon"></span>
+              </a>
+            </div>
+          </header>
+          <form ng-submit="doLogin($event)">
+            <div class="list">
+              <label class="item item-input item-floating-label">
+                <input type="text" placeholder="注册或验证过的手机号或者邮箱" ng-model="loginData.username">
+                <!-- {{loginData.username}} -->
+              </label>
+              <label class="item item-input item-floating-label" >
+                <input type="password" placeholder="登录密码" ng-model="loginData.password">
+                <!-- {{loginData.password}} -->
+              </label>
+              <label class="login"style="text-indent:1rem">
+                <button class="btn-order btn-login btn-full" type="submit">登录</button>
+                <!-- <button class="btn-order" ng-click="getFormData()">获取Form表单的值</button> -->
+                <span  class="pull-right" ><a href="#">忘记密码?</a></span>
+             </label>
+            </div>
+          </form>
+         <div class="login_txt" style="text-indent:0.3rem">
+            <span class="pull-left" ng-click="register()"><a href="#" class="mag">立即注册</a></span >
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+
